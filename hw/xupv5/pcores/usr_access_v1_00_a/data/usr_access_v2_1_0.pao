@@ -1,0 +1,10 @@
+##############################################################################
+## Filename:          C:/svn-local/trunk/hw/XUPv5/xupv5/pcores/usr_access_v1_00_a/data/usr_access_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Mon Apr 02 18:43:42 2012 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib plbv46_slave_single_v1_01_a  all 
+lib usr_access_v1_00_a user_logic verilog
+lib usr_access_v1_00_a usr_access vhdl

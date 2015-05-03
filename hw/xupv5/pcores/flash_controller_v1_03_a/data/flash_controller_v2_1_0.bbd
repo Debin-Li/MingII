@@ -1,0 +1,9 @@
+##############################################################################
+## Filename:          C:\EDK\xupv5-lx110t_bsb_design\pcores/flash_controller_v1_02_b/data/flash_controller_v2_1_0.bbd
+## Description:       Black Box Definition
+## Date:              Tue Mar 01 20:03:48 2011 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+Files
+################################################################################
+command_fifo.ngc,dram_rqst_fifo.ngc,read_fifo.ngc,result_fifo.ngc,write_buffer.ngc,read_buffer.ngc,chip_scoreboard.ngc,tag_scoreboard.ngc,write_fifo.ngc,adc_comm_fifo.ngc,adc_sample_fifo.ngc

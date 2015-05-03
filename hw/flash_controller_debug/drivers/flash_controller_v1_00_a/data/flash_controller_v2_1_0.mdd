@@ -1,0 +1,15 @@
+##############################################################################
+## Filename:          C:\Development\EDK\IP\MyProcessorIPLib/drivers/flash_controller_v1_00_a/data/flash_controller_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Tue Jan 25 13:08:38 2011 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER flash_controller
+
+  OPTION supported_peripherals = (flash_controller);
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+END DRIVER

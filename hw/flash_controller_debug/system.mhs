@@ -1,0 +1,346 @@
+
+# ##############################################################################
+# Created by Base System Builder Wizard for Xilinx EDK 12.4 Build EDK_MS4.81d
+# Tue Jan 11 14:53:33 2011
+# Target Board:  Xilinx XUPV5-LX110T Evaluation Platform Rev A
+# Family:    virtex5
+# Device:    xc5vlx110t
+# Package:   ff1136
+# Speed Grade:  -1
+# Processor number: 1
+# Processor 1: microblaze_0
+# System clock frequency: 125.0
+# Debug Interface: On-Chip HW Debug Module
+# ##############################################################################
+ PARAMETER VERSION = 2.1.0
+
+
+ PORT fpga_0_RS232_Uart_2_RX_pin = fpga_0_RS232_Uart_2_RX_pin, DIR = I
+ PORT fpga_0_RS232_Uart_2_TX_pin = fpga_0_RS232_Uart_2_TX_pin, DIR = O
+ PORT fpga_0_DDR2_SDRAM_DDR2_Clk_pin = fpga_0_DDR2_SDRAM_DDR2_Clk_pin, DIR = O, VEC = [1:0]
+ PORT fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin = fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin, DIR = O, VEC = [1:0]
+ PORT fpga_0_DDR2_SDRAM_DDR2_CE_pin = fpga_0_DDR2_SDRAM_DDR2_CE_pin, DIR = O, VEC = [1:0]
+ PORT fpga_0_DDR2_SDRAM_DDR2_CS_n_pin = fpga_0_DDR2_SDRAM_DDR2_CS_n_pin, DIR = O, VEC = [1:0]
+ PORT fpga_0_DDR2_SDRAM_DDR2_ODT_pin = fpga_0_DDR2_SDRAM_DDR2_ODT_pin, DIR = O, VEC = [1:0]
+ PORT fpga_0_DDR2_SDRAM_DDR2_RAS_n_pin = fpga_0_DDR2_SDRAM_DDR2_RAS_n_pin, DIR = O
+ PORT fpga_0_DDR2_SDRAM_DDR2_CAS_n_pin = fpga_0_DDR2_SDRAM_DDR2_CAS_n_pin, DIR = O
+ PORT fpga_0_DDR2_SDRAM_DDR2_WE_n_pin = fpga_0_DDR2_SDRAM_DDR2_WE_n_pin, DIR = O
+ PORT fpga_0_DDR2_SDRAM_DDR2_BankAddr_pin = fpga_0_DDR2_SDRAM_DDR2_BankAddr_pin, DIR = O, VEC = [1:0]
+ PORT fpga_0_DDR2_SDRAM_DDR2_Addr_pin = fpga_0_DDR2_SDRAM_DDR2_Addr_pin, DIR = O, VEC = [12:0]
+ PORT fpga_0_DDR2_SDRAM_DDR2_DQ_pin = fpga_0_DDR2_SDRAM_DDR2_DQ_pin, DIR = IO, VEC = [63:0]
+ PORT fpga_0_DDR2_SDRAM_DDR2_DM_pin = fpga_0_DDR2_SDRAM_DDR2_DM_pin, DIR = O, VEC = [7:0]
+ PORT fpga_0_DDR2_SDRAM_DDR2_DQS_pin = fpga_0_DDR2_SDRAM_DDR2_DQS_pin, DIR = IO, VEC = [7:0]
+ PORT fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin = fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin, DIR = IO, VEC = [7:0]
+ PORT fpga_0_RS232_Uart_1_RX_pin = fpga_0_RS232_Uart_1_RX_pin, DIR = I
+ PORT fpga_0_RS232_Uart_1_TX_pin = fpga_0_RS232_Uart_1_TX_pin, DIR = O
+ PORT fpga_0_clk_1_sys_clk_pin = dcm_clk_s, DIR = I, SIGIS = CLK, CLK_FREQ = 100000000
+ PORT fpga_0_rst_1_sys_rst_pin = sys_rst_s, DIR = I, SIGIS = RST, RST_POLARITY = 0
+# ADC Pins
+ PORT ADC_CS_N = flash_controller_0_o_adc_chip_select_n, DIR = O, VEC = [1:0]
+ PORT ADC_DATA_OUT = flash_controller_0_o_adc_data, DIR = O
+ PORT ADC_DATA_IN = flash_controller_0_i_adc_data, DIR = I, VEC = [3:0]
+ PORT ADC_CLK = clk_30_0000MHz, DIR = O, SIGIS = CLK, CLK_FREQ = 30000000
+# Flash Controller Pins
+ PORT BUS0_IO = flash_controller_0_io_bus0_data, DIR = IO, VEC = [7:0]
+ PORT BUS0_WE_N = flash_controller_0_o_bus0_we_n, DIR = O
+ PORT BUS0_RE_N = flash_controller_0_o_bus0_re_n, DIR = O
+ PORT BUS0_CEs_N = flash_controller_0_o_bus0_ces_n, DIR = O, VEC = [3:0]
+ PORT BUS0_CLE = flash_controller_0_o_bus0_cle, DIR = O
+ PORT BUS0_ALE = flash_controller_0_o_bus0_ale, DIR = O
+ PORT BUS1_IO = flash_controller_0_io_bus1_data, DIR = IO, VEC = [7:0]
+ PORT BUS1_WE_N = flash_controller_0_o_bus1_we_n, DIR = O
+ PORT BUS1_RE_N = flash_controller_0_o_bus1_re_n, DIR = O
+ PORT BUS1_CEs_N = flash_controller_0_o_bus1_ces_n, DIR = O, VEC = [3:0]
+ PORT BUS1_CLE = flash_controller_0_o_bus1_cle, DIR = O
+ PORT BUS1_ALE = flash_controller_0_o_bus1_ale, DIR = O
+ PORT BUS2_IO = flash_controller_0_io_bus2_data, DIR = IO, VEC = [7:0]
+ PORT BUS2_WE_N = flash_controller_0_o_bus2_we_n, DIR = O
+ PORT BUS2_RE_N = flash_controller_0_o_bus2_re_n, DIR = O
+ PORT BUS2_CEs_N = flash_controller_0_o_bus2_ces_n, DIR = O, VEC = [3:0]
+ PORT BUS2_CLE = flash_controller_0_o_bus2_cle, DIR = O
+ PORT BUS2_ALE = flash_controller_0_o_bus2_ale, DIR = O
+ PORT BUS3_IO = flash_controller_0_io_bus3_data, DIR = IO, VEC = [7:0]
+ PORT BUS3_WE_N = flash_controller_0_o_bus3_we_n, DIR = O
+ PORT BUS3_RE_N = flash_controller_0_o_bus3_re_n, DIR = O
+ PORT BUS3_CEs_N = flash_controller_0_o_bus3_ces_n, DIR = O, VEC = [3:0]
+ PORT BUS3_CLE = flash_controller_0_o_bus3_cle, DIR = O
+ PORT BUS3_ALE = flash_controller_0_o_bus3_ale, DIR = O
+
+
+# PORT BUS0_ACTIVE = flash_controller_0_o_bus0_active, DIR = O
+# PORT BUS1_ACTIVE = flash_controller_0_o_bus1_active, DIR = O
+# PORT BUS2_ACTIVE = flash_controller_0_o_bus2_active, DIR = O
+# PORT BUS3_ACTIVE = flash_controller_0_o_bus3_active, DIR = O
+BEGIN microblaze
+ PARAMETER INSTANCE = microblaze_0
+ PARAMETER C_USE_BARREL = 1
+ PARAMETER C_DEBUG_ENABLED = 1
+ PARAMETER HW_VER = 8.20.b
+# PARAMETER C_USE_DCACHE = 0
+# PARAMETER C_USE_ICACHE = 0
+ PARAMETER C_USE_MMU = 0
+# PARAMETER C_CACHE_BYTE_SIZE = 8192
+ PARAMETER C_DPLB_BUS_EXCEPTION = 0
+ PARAMETER C_IPLB_BUS_EXCEPTION = 0
+ PARAMETER C_ILL_OPCODE_EXCEPTION = 0
+ PARAMETER C_UNALIGNED_EXCEPTIONS = 0
+ PARAMETER C_OPCODE_0x0_ILLEGAL = 0
+# PARAMETER C_ICACHE_BASEADDR = 0x90000000
+# PARAMETER C_ICACHE_HIGHADDR = 0x9fffffff
+# PARAMETER C_DCACHE_BASEADDR = 0x90000000
+# PARAMETER C_DCACHE_HIGHADDR = 0x9fffffff
+ PARAMETER C_USE_HW_MUL = 1
+ PARAMETER C_USE_DIV = 0
+# PARAMETER C_ICACHE_ALWAYS_USED = 1
+# PARAMETER C_ICACHE_FORCE_TAG_LUTRAM = 0
+# PARAMETER C_ICACHE_STREAMS = 0
+# PARAMETER C_ICACHE_VICTIMS = 0
+# PARAMETER C_DCACHE_ALWAYS_USED = 1
+# PARAMETER C_DCACHE_FORCE_TAG_LUTRAM = 0
+# PARAMETER C_DCACHE_USE_WRITEBACK = 0
+# PARAMETER C_ICACHE_LINE_LEN = 8
+ PARAMETER C_NUMBER_OF_PC_BRK = 2
+ BUS_INTERFACE DPLB = mb_plb
+ BUS_INTERFACE IPLB = mb_plb
+ BUS_INTERFACE DEBUG = microblaze_0_mdm_bus
+# BUS_INTERFACE DXCL = microblaze_0_DXCL
+# BUS_INTERFACE IXCL = microblaze_0_IXCL
+ BUS_INTERFACE DLMB = dlmb
+ BUS_INTERFACE ILMB = ilmb
+ PORT MB_RESET = mb_reset
+ PORT INTERRUPT = microblaze_0_INTERRUPT
+END
+
+BEGIN plb_v46
+ PARAMETER INSTANCE = mb_plb
+ PARAMETER HW_VER = 1.05.a
+ PORT PLB_Clk = clk_75_0000MHzPLL0
+ PORT SYS_Rst = sys_bus_reset
+ PORT Bus_Error_Det = mb_plb_Bus_Error_Det
+END
+
+BEGIN lmb_v10
+ PARAMETER INSTANCE = ilmb
+ PARAMETER HW_VER = 2.00.b
+ PORT LMB_Clk = clk_75_0000MHzPLL0
+ PORT SYS_Rst = sys_bus_reset
+END
+
+BEGIN lmb_v10
+ PARAMETER INSTANCE = dlmb
+ PARAMETER HW_VER = 2.00.b
+ PORT LMB_Clk = clk_75_0000MHzPLL0
+ PORT SYS_Rst = sys_bus_reset
+END
+
+BEGIN lmb_bram_if_cntlr
+ PARAMETER INSTANCE = dlmb_cntlr
+ PARAMETER HW_VER = 3.00.b
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x00003fff
+ BUS_INTERFACE SLMB = dlmb
+ BUS_INTERFACE BRAM_PORT = dlmb_port
+ PORT Interrupt = dlmb_cntlr_Interrupt
+END
+
+BEGIN lmb_bram_if_cntlr
+ PARAMETER INSTANCE = ilmb_cntlr
+ PARAMETER HW_VER = 3.00.b
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x00003fff
+ BUS_INTERFACE SLMB = ilmb
+ BUS_INTERFACE BRAM_PORT = ilmb_port
+ PORT Interrupt = ilmb_cntlr_Interrupt
+END
+
+BEGIN bram_block
+ PARAMETER INSTANCE = lmb_bram
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE PORTA = ilmb_port
+ BUS_INTERFACE PORTB = dlmb_port
+END
+
+BEGIN xps_uartlite
+ PARAMETER INSTANCE = RS232_Uart_2
+ PARAMETER C_BAUDRATE = 9600
+ PARAMETER C_DATA_BITS = 8
+ PARAMETER C_USE_PARITY = 0
+ PARAMETER C_ODD_PARITY = 0
+ PARAMETER HW_VER = 1.02.a
+ PARAMETER C_BASEADDR = 0x84000000
+ PARAMETER C_HIGHADDR = 0x8400ffff
+ BUS_INTERFACE SPLB = mb_plb
+ PORT RX = fpga_0_RS232_Uart_2_RX_pin
+ PORT TX = fpga_0_RS232_Uart_2_TX_pin
+END
+
+BEGIN mpmc
+ PARAMETER INSTANCE = DDR2_SDRAM
+ PARAMETER C_NUM_PORTS = 3
+ PARAMETER C_NUM_IDELAYCTRL = 3
+ PARAMETER C_IDELAYCTRL_LOC = IDELAYCTRL_X0Y6-IDELAYCTRL_X0Y2-IDELAYCTRL_X0Y1
+ PARAMETER C_MEM_PARTNO = mt4htf3264h-53e
+ PARAMETER C_MEM_ODT_TYPE = 1
+ PARAMETER C_MEM_CLK_WIDTH = 2
+ PARAMETER C_MEM_ODT_WIDTH = 2
+ PARAMETER C_MEM_CE_WIDTH = 2
+ PARAMETER C_MEM_CS_N_WIDTH = 2
+ PARAMETER C_MEM_DATA_WIDTH = 64
+ PARAMETER C_DDR2_DQSN_ENABLE = 1
+ PARAMETER C_PIM0_BASETYPE = 2
+ PARAMETER HW_VER = 6.05.a
+ PARAMETER C_FAMILY = virtex5
+ PARAMETER C_MPMC_BASEADDR = 0x90000000
+ PARAMETER C_MPMC_HIGHADDR = 0x9fffffff
+ BUS_INTERFACE SPLB0 = mb_plb
+# BUS_INTERFACE XCL1 = microblaze_0_DXCL
+# BUS_INTERFACE XCL2 = microblaze_0_IXCL
+ PORT MPMC_Clk0 = clk_150_0000MHzPLL0
+ PORT MPMC_Clk0_DIV2 = clk_75_0000MHzPLL0
+ PORT MPMC_Clk90 = clk_150_0000MHz90PLL0
+ PORT MPMC_Clk_200MHz = clk_200_0000MHz
+ PORT MPMC_Rst = sys_periph_reset
+ PORT DDR2_Clk = fpga_0_DDR2_SDRAM_DDR2_Clk_pin
+ PORT DDR2_Clk_n = fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin
+ PORT DDR2_CE = fpga_0_DDR2_SDRAM_DDR2_CE_pin
+ PORT DDR2_CS_n = fpga_0_DDR2_SDRAM_DDR2_CS_n_pin
+ PORT DDR2_ODT = fpga_0_DDR2_SDRAM_DDR2_ODT_pin
+ PORT DDR2_RAS_n = fpga_0_DDR2_SDRAM_DDR2_RAS_n_pin
+ PORT DDR2_CAS_n = fpga_0_DDR2_SDRAM_DDR2_CAS_n_pin
+ PORT DDR2_WE_n = fpga_0_DDR2_SDRAM_DDR2_WE_n_pin
+ PORT DDR2_BankAddr = fpga_0_DDR2_SDRAM_DDR2_BankAddr_pin
+ PORT DDR2_Addr = fpga_0_DDR2_SDRAM_DDR2_Addr_pin
+ PORT DDR2_DQ = fpga_0_DDR2_SDRAM_DDR2_DQ_pin
+ PORT DDR2_DM = fpga_0_DDR2_SDRAM_DDR2_DM_pin
+ PORT DDR2_DQS = fpga_0_DDR2_SDRAM_DDR2_DQS_pin
+ PORT DDR2_DQS_n = fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin
+END
+
+BEGIN xps_uartlite
+ PARAMETER INSTANCE = RS232_Uart_1
+ PARAMETER C_BAUDRATE = 9600
+ PARAMETER C_DATA_BITS = 8
+ PARAMETER C_USE_PARITY = 0
+ PARAMETER C_ODD_PARITY = 0
+ PARAMETER HW_VER = 1.02.a
+ PARAMETER C_BASEADDR = 0x84020000
+ PARAMETER C_HIGHADDR = 0x8402ffff
+ BUS_INTERFACE SPLB = mb_plb
+ PORT RX = fpga_0_RS232_Uart_1_RX_pin
+ PORT TX = fpga_0_RS232_Uart_1_TX_pin
+END
+
+BEGIN clock_generator
+ PARAMETER INSTANCE = clock_generator_0
+ PARAMETER C_CLKIN_FREQ = 100000000
+ PARAMETER C_CLKOUT0_FREQ = 150000000
+ PARAMETER C_CLKOUT0_PHASE = 90
+ PARAMETER C_CLKOUT0_GROUP = PLL0
+ PARAMETER C_CLKOUT0_BUF = TRUE
+ PARAMETER C_CLKOUT1_FREQ = 75000000
+ PARAMETER C_CLKOUT1_PHASE = 0
+ PARAMETER C_CLKOUT1_GROUP = PLL0
+ PARAMETER C_CLKOUT1_BUF = TRUE
+ PARAMETER C_CLKOUT2_FREQ = 200000000
+ PARAMETER C_CLKOUT2_PHASE = 0
+ PARAMETER C_CLKOUT2_GROUP = NONE
+ PARAMETER C_CLKOUT2_BUF = TRUE
+ PARAMETER C_CLKOUT3_FREQ = 150000000
+ PARAMETER C_CLKOUT3_PHASE = 0
+ PARAMETER C_CLKOUT3_GROUP = PLL0
+ PARAMETER C_CLKOUT3_BUF = TRUE
+ PARAMETER C_EXT_RESET_HIGH = 0
+ PARAMETER HW_VER = 4.03.a
+ PARAMETER C_FAMILY = virtex5
+ PARAMETER C_CLKOUT4_FREQ = 30000000
+ PORT CLKIN = dcm_clk_s
+ PORT CLKOUT0 = clk_150_0000MHz90PLL0
+ PORT CLKOUT1 = clk_75_0000MHzPLL0
+ PORT CLKOUT2 = clk_200_0000MHz
+ PORT CLKOUT3 = clk_150_0000MHzPLL0
+ PORT RST = sys_rst_s
+ PORT LOCKED = Dcm_all_locked
+ PORT CLKOUT4 = clk_30_0000MHz
+END
+
+BEGIN mdm
+ PARAMETER INSTANCE = mdm_0
+ PARAMETER C_MB_DBG_PORTS = 1
+ PARAMETER C_USE_UART = 1
+ PARAMETER HW_VER = 2.00.b
+ PARAMETER C_BASEADDR = 0x84400000
+ PARAMETER C_HIGHADDR = 0x8440ffff
+ BUS_INTERFACE SPLB = mb_plb
+ BUS_INTERFACE MBDEBUG_0 = microblaze_0_mdm_bus
+ PORT Debug_SYS_Rst = Debug_SYS_Rst
+ PORT Interrupt = mdm_0_Interrupt
+END
+
+BEGIN proc_sys_reset
+ PARAMETER INSTANCE = proc_sys_reset_0
+ PARAMETER C_EXT_RESET_HIGH = 0
+ PARAMETER HW_VER = 3.00.a
+ PORT Slowest_sync_clk = clk_75_0000MHzPLL0
+ PORT Ext_Reset_In = sys_rst_s
+ PORT MB_Debug_Sys_Rst = Debug_SYS_Rst
+ PORT Dcm_locked = Dcm_all_locked
+ PORT MB_Reset = mb_reset
+ PORT Bus_Struct_Reset = sys_bus_reset
+ PORT Peripheral_Reset = sys_periph_reset
+END
+
+BEGIN xps_intc
+ PARAMETER INSTANCE = xps_intc_0
+ PARAMETER HW_VER = 2.01.a
+ PARAMETER C_BASEADDR = 0x81800000
+ PARAMETER C_HIGHADDR = 0x8180ffff
+ BUS_INTERFACE SPLB = mb_plb
+ PORT Irq = microblaze_0_INTERRUPT
+ PORT Intr = mdm_0_Interrupt & ilmb_cntlr_Interrupt & dlmb_cntlr_Interrupt & mb_plb_Bus_Error_Det & flash_controller_0_IP2INTC_Irpt
+END
+
+BEGIN flash_controller
+ PARAMETER INSTANCE = flash_controller_0
+ PARAMETER HW_VER = 1.03.a
+ PARAMETER C_BASEADDR = 0xc2e00000
+ PARAMETER C_HIGHADDR = 0xc2e0ffff
+ PARAMETER C_NUM_BUSES = 4
+ PARAMETER C_NUM_CHIPS_PER_BUS = 4
+ PARAMETER C_PERIOD = 14
+ BUS_INTERFACE MPLB = mb_plb
+ BUS_INTERFACE SPLB = mb_plb
+ PORT io_bus0_data = flash_controller_0_io_bus0_data
+ PORT o_bus0_we_n = flash_controller_0_o_bus0_we_n
+ PORT o_bus0_re_n = flash_controller_0_o_bus0_re_n
+ PORT o_bus0_ces_n = flash_controller_0_o_bus0_ces_n
+ PORT o_bus0_cle = flash_controller_0_o_bus0_cle
+ PORT o_bus0_ale = flash_controller_0_o_bus0_ale
+ PORT io_bus1_data = flash_controller_0_io_bus1_data
+ PORT io_bus2_data = flash_controller_0_io_bus2_data
+ PORT io_bus3_data = flash_controller_0_io_bus3_data
+ PORT IP2INTC_Irpt = flash_controller_0_IP2INTC_Irpt
+ PORT o_bus1_we_n = flash_controller_0_o_bus1_we_n
+ PORT o_bus1_re_n = flash_controller_0_o_bus1_re_n
+ PORT o_bus1_ces_n = flash_controller_0_o_bus1_ces_n
+ PORT o_bus1_cle = flash_controller_0_o_bus1_cle
+ PORT o_bus1_ale = flash_controller_0_o_bus1_ale
+ PORT o_bus2_we_n = flash_controller_0_o_bus2_we_n
+ PORT o_bus2_re_n = flash_controller_0_o_bus2_re_n
+ PORT o_bus2_ces_n = flash_controller_0_o_bus2_ces_n
+ PORT o_bus2_cle = flash_controller_0_o_bus2_cle
+ PORT o_bus2_ale = flash_controller_0_o_bus2_ale
+ PORT o_bus3_we_n = flash_controller_0_o_bus3_we_n
+ PORT o_bus3_re_n = flash_controller_0_o_bus3_re_n
+ PORT o_bus3_ces_n = flash_controller_0_o_bus3_ces_n
+ PORT o_bus3_cle = flash_controller_0_o_bus3_cle
+ PORT o_bus3_ale = flash_controller_0_o_bus3_ale
+ PORT o_bus0_active = flash_controller_0_o_bus0_active
+ PORT o_bus1_active = flash_controller_0_o_bus1_active
+ PORT o_bus2_active = flash_controller_0_o_bus2_active
+ PORT o_bus3_active = flash_controller_0_o_bus3_active
+ PORT o_adc_data = flash_controller_0_o_adc_data
+ PORT i_adc_data = flash_controller_0_i_adc_data
+ PORT i_adc_clk = clk_30_0000MHz
+ PORT o_adc_chip_select_n = flash_controller_0_o_adc_chip_select_n
+END
+

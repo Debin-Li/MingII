@@ -1,0 +1,13 @@
+V3 7
+FL C:/svn-local/trunk/hw/XUPv5/xupv5/pcores/usr_access_v1_00_a/hdl/vhdl/usr_access.vhd 2012/04/02.18:43:42 O.87xd
+EN work/usr_access 1333421169 \
+      FL C:/svn-local/trunk/hw/XUPv5/xupv5/pcores/usr_access_v1_00_a/hdl/vhdl/usr_access.vhd \
+      PB ieee/std_logic_1164 1325952872 PB ieee/std_logic_arith 1325952873 \
+      PB ieee/STD_LOGIC_UNSIGNED 1325952875 LB proc_common_v3_00_a \
+      PB proc_common_v3_00_a/proc_common_pkg 1333421150 \
+      PB proc_common_v3_00_a/ipif_pkg 1333421162 LB plbv46_slave_single_v1_01_a \
+      EN plbv46_slave_single_v1_01_a/plbv46_slave_single 1333421167
+AR work/usr_access/IMP 1333421170 \
+      FL C:/svn-local/trunk/hw/XUPv5/xupv5/pcores/usr_access_v1_00_a/hdl/vhdl/usr_access.vhd \
+      EN work/usr_access 1333421169 \
+      CP plbv46_slave_single_v1_01_a/plbv46_slave_single CP user_logic

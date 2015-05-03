@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/svn-local/trunk/hw/XUPv5/xupv5/pcores/usr_access_v1_00_a/devl/projnav/usr_access.xst" -ofn "C:/svn-local/trunk/hw/XUPv5/xupv5/pcores/usr_access_v1_00_a/devl/projnav/usr_access.syr" 
+xst -intstyle ise -ifn "C:/svn-local/trunk/hw/XUPv5/xupv5/pcores/usr_access_v1_00_a/devl/projnav/usr_access.xst" -ofn "C:/svn-local/trunk/hw/XUPv5/xupv5/pcores/usr_access_v1_00_a/devl/projnav/usr_access.syr" 

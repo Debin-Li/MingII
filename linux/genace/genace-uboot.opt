@@ -1,0 +1,9 @@
+-board xupv5
+-hw ../../../hw/XUPv5/xupv5/implementation/system.bit
+-debugdevice devicenr 1 cpunr 1 cpu_version microblaze_v6
+-start_address 0x5f000000
+-target mdm
+-elf ../u-boot/u-boot
+-data ../linux-2.6-microblaze/arch/microblaze/boot/simpleImage.nvslxupv5.ub 0x5a000000
+-ace linux_system.ace
+

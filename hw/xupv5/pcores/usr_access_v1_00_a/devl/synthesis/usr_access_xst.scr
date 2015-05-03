@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "C:\svn-local\trunk\hw\XUPv5\xupv5\pcores\usr_access_v1_00_a\devl\synthesis\usr_access_xst.prj"
+-top usr_access
+-p virtex6
+-ofn "C:\svn-local\trunk\hw\XUPv5\xupv5\pcores\usr_access_v1_00_a\devl\synthesis\usr_access_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib usr_access_v1_00_a

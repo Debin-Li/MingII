@@ -1,0 +1,154 @@
+Library Converter Report - Tuesday, May 11, 2010 11:52:54 AM
+Converting \\Mort.archnet.ucsd.edu\Users\Michael Wei\My Documents\PCB\Libs\flash2.pt07...
+6-32_MOUNTING_HOLE - OK
+74HC4067 - OK
+CON-SIP-10P-TERM - OK
+ESATA-RA-SMT - OK
+FX2-100S-1.27DS(71) - OK
+HEADER20 - OK
+HEADER40 - OK
+MOUNT_0.25PAD_0.156ID - OK
+NAND_FLASH_TSOP-48 - OK
+PCM - OK
+TI_TXB0106 - OK
+TI_TXB0108 - OK
+TSOP-48-SOCKET - OK
+TYCO_1367555-1 - OK
+VSSR20-2.0K-JB-ND - OK
+XC95144XL-10TQ100 - OK
+XC9572XL-10TQG100C - OK
+XC9572XL-10VQG64C - OK
+Records converted: 18
+Errors: 0
+
+Converting \\Mort.archnet.ucsd.edu\Users\Michael Wei\My Documents\PCB\Libs\flash2.pd07...
+6-32_MOUNTING_HOLE - OK
+ESATA-FCI-10067172-50CLF - OK
+FX2-100S-1.27DS(71) - OK
+HEADER40 - OK
+MOUNT_0.25PAD_0.156ID - OK
+PHYTON-TSOP-48-CARRIER-BOARD - OK
+SIP-10P - OK
+SIP-2P - OK
+SSOP20 - OK
+SSOP20-2 - OK
+SSOP20-3 - OK
+TSOP-48 - OK
+TSOP-48-SOCKET - OK
+TSOP56-14X20 - OK
+TYCO_1367555-1 - OK
+XILINX_TQFP100 - OK
+Records converted: 16
+Errors: 0
+
+Converting \\Mort.archnet.ucsd.edu\Users\Michael Wei\My Documents\PCB\Libs\flash2.ld07...
+20-PIN - OK
+74HC4067 - OK
+CONIN - OK
+CONIN1 - OK
+CONOUT - OK
+CONOUT1 - OK
+CON_IO - OK
+FLASH - OK
+MOUNT_HOLE - OK
+QFP64 - OK
+SATA - OK
+TSOP56 - OK
+XC95144XL-10TQ100 - OK
+XC9572XL-TQ100 - OK
+Records converted: 14
+Errors: 0
+
+Converting \\Mort.archnet.ucsd.edu\Users\Michael Wei\My Documents\PCB\Libs\flash2.ln07...
+GORDONLOGO - OK
+MINIMALSCHEMATICOUTLINE - OK
+Records converted: 2
+Errors: 0
+
+Converting \\Mort.archnet.ucsd.edu\Users\Michael Wei\My Documents\PCB\Libs\flash.pt07...
+24LC16B - OK
+6-32_MOUNTING_HOLE - OK
+74HC4067 - OK
+CON-SIP-10P-TERM - OK
+ESATA-RA-SMT - OK
+FERRITE_BEAD - OK
+FT232RL - OK
+FX2-100S-1.27DS(71) - OK
+HEADER20 - OK
+HEADER40 - OK
+MOUNT_0.25PAD_0.156ID - OK
+NAND_FLASH_TSOP-48 - OK
+PBASIC2/P - OK
+PCM - OK
+RELAY_ALA2F05 - OK
+RESONATOR - OK
+SCREW_TERMINAL_4P - OK
+TI_TXB0106 - OK
+TI_TXB0108 - OK
+TYCO_1367555-1 - OK
+ULN2803A - OK
+USB - OK
+VSSR20-2.0K-JB-ND - OK
+XC95144XL-10TQ100 - OK
+XC9572XL-10TQG100C - OK
+XC9572XL-10VQG64C - OK
+Records converted: 26
+Errors: 0
+
+Converting \\Mort.archnet.ucsd.edu\Users\Michael Wei\My Documents\PCB\Libs\flash.pd07...
+6-32_MOUNTING_HOLE - OK
+ESATA-FCI-10067172-50CLF - OK
+FX2-100S-1.27DS(71) - OK
+HEADER40 - OK
+MOUNT_0.25PAD_0.156ID - OK
+PHYTON-TSOP-48-CARRIER-BOARD - OK
+RELAY_ALA2F05 - OK
+SIP-10P - OK
+SIP-2P - OK
+SIP-508-4P - OK
+SSOP20 - OK
+SSOP20-2 - OK
+SSOP20-3 - OK
+TSOP-48 - OK
+TSOP-48-SOCKET - OK
+TSOP56-14X20 - OK
+TYCO_1367555-1 - OK
+USB-MINIB_MOLEX-54819-0519 - OK
+XILINX_TQFP100 - OK
+Records converted: 19
+Errors: 0
+
+Converting \\Mort.archnet.ucsd.edu\Users\Michael Wei\My Documents\PCB\Libs\flash.ld07...
+20-PIN - OK
+24LC16B - OK
+74HC4067 - OK
+BEAD - OK
+CONIN - OK
+CONIN1 - OK
+CONOUT - OK
+CONOUT1 - OK
+CON_IO - OK
+FLASH - OK
+FT232RL - OK
+INV-DIO - OK
+INV-DIO-C - OK
+MOUNT_HOLE - OK
+PBASIC2/P - OK
+QFP64 - OK
+RELAY_ALA2F05 - OK
+RESONATOR - OK
+SATA - OK
+SCREW_TERMINAL - OK
+TSOP56 - OK
+USB - OK
+XC95144XL-10TQ100 - OK
+XC9572XL-TQ100 - OK
+Records converted: 24
+Errors: 0
+
+Converting \\Mort.archnet.ucsd.edu\Users\Michael Wei\My Documents\PCB\Libs\flash.ln07...
+GORDONLOGO - OK
+MINIMALSCHEMATICOUTLINE - OK
+Records converted: 2
+Errors: 0
+

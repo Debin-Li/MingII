@@ -1,0 +1,20 @@
+#!/bin/bash
+
+CDIR=`pwd`
+
+export MODELSIM_PATH=/gro/Xilinx/ModelSim/6.5c/modeltech/linux_x86_64
+
+export PATH=$MODELSIM_PATH:$PATH
+
+export LM_LICENSE_FILE=1718@jude.ucsd.edu:2100@bbfs-01.calit2.net
+
+if [ "$BOOST." = "." ]; then
+    export BOOST=.
+fi
+
+. /gro/Xilinx/13.4/ISE_DS/settings64.sh
+export XIL_PAR_DESIGN_CHECK_VERBOSE=1
+echo Using Xilinx 13.4 Tools
+export XIL_VERSION=134
+
+export MACHINE_TYPE=$(uname)

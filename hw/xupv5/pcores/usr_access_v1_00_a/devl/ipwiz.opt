@@ -1,0 +1,10 @@
+-batch 
+-create usr_access 
+-ver 1.00.a 
+-dir "C:\svn-local\trunk\hw\XUPv5\xupv5" 
+-lang verilog 
+-bus plbv46 s 
+-reg 1 
+-xps 
+-ise 
+-driver 

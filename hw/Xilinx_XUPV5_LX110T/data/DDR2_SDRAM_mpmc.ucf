@@ -1,0 +1,100 @@
+###############################################################################
+# Define multicycle paths - these paths may take longer because additional
+# time allowed for logic to settle in calibration/initialization FSM
+###############################################################################
+
+
+# MUX Select for either rising/falling CLK0 for 2nd stage read capture
+INST "*/u_phy_calib_0/gen_rd_data_sel*.u_ff_rd_data_sel" TNM = "TNM_RD_DATA_SEL";
+TIMESPEC "TS_MC_RD_DATA_SEL" = FROM "TNM_RD_DATA_SEL" TO FFS
+  "TS_sys_clk_pin" * 2;
+# MUX select for read data - optional delay on data to account for byte skews
+#INST "*/u_usr_rd_0/gen_rden_sel_mux*.u_ff_rden_sel_mux" TNM = "TNM_RDEN_SEL_MUX";
+#TIMESPEC "TS_MC_RDEN_SEL_MUX" = FROM "TNM_RDEN_SEL_MUX" TO FFS   "TS_sys_clk_pin" * 2;
+# Calibration/Initialization complete status flag (for PHY logic only)
+INST "*/u_phy_init_0/u_ff_phy_init_data_sel" TNM = "TNM_PHY_INIT_DATA_SEL";
+TIMESPEC "TS_MC_PHY_INIT_DATA_SEL_0" = FROM "TNM_PHY_INIT_DATA_SEL" TO
+ FFS "TS_sys_clk_pin" * 2;
+TIMESPEC "TS_MC_PHY_INIT_DATA_SEL_90" = FROM "TNM_PHY_INIT_DATA_SEL" TO
+  FFS "TS_sys_clk_pin" * 2;
+# Select (address) bits for SRL32 shift registers used in stage3/stage4
+# calibration
+INST "*/u_phy_calib_0/gen_gate_dly*.u_ff_gate_dly" TNM = "TNM_GATE_DLY";
+TIMESPEC "TS_MC_GATE_DLY" = FROM "TNM_GATE_DLY" TO FFS "TS_sys_clk_pin" * 2;
+INST "*/u_phy_calib_0/gen_rden_dly*.u_ff_rden_dly" TNM = "TNM_RDEN_DLY";
+TIMESPEC "TS_MC_RDEN_DLY" = FROM "TNM_RDEN_DLY" TO FFS "TS_sys_clk_pin" * 2;
+INST "*/u_phy_calib_0/gen_cal_rden_dly*.u_ff_cal_rden_dly"
+  TNM = "TNM_CAL_RDEN_DLY";
+TIMESPEC "TS_MC_CAL_RDEN_DLY" = FROM "TNM_CAL_RDEN_DLY" TO FFS
+  "TS_sys_clk_pin" * 2;
+
+###############################################################################
+# DQS Read Postamble Glitch Squelch circuit related constraints
+###############################################################################
+
+###############################################################################
+# LOC placement of DQS-squelch related IDDR and IDELAY elements
+# Each circuit can be located at any of the following locations:
+#  1. Ununsed "N"-side of DQS diff pair I/O
+#  2. DM data mask (output only, input side is free for use)
+#  3. Any output-only site
+###############################################################################
+
+INST "*/gen_dqs[0].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y96";
+INST "*/gen_dqs[0].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y96";
+INST "*/gen_dqs[1].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y58";
+INST "*/gen_dqs[1].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y58";
+INST "*/gen_dqs[2].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y62";
+INST "*/gen_dqs[2].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y62";
+INST "*/gen_dqs[3].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y100";
+INST "*/gen_dqs[3].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y100";
+INST "*/gen_dqs[4].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y102";
+INST "*/gen_dqs[4].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y102";
+INST "*/gen_dqs[5].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y256";
+INST "*/gen_dqs[5].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y256";
+INST "*/gen_dqs[6].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y260";
+INST "*/gen_dqs[6].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y260";
+INST "*/gen_dqs[7].u_iob_dqs/u_iddr_dq_ce"  LOC = "ILOGIC_X0Y262";
+INST "*/gen_dqs[7].u_iob_dqs/u_iodelay_dq_ce"  LOC = "IODELAY_X0Y262";
+
+###############################################################################
+# LOC and timing constraints for flop driving DQS CE enable signal
+# from fabric logic. Even though the absolute delay on this path is
+# calibrated out (when synchronizing this output to DQS), the delay
+# should still be kept as low as possible to reduce post-calibration
+# voltage/temp variations - these are roughly proportional to the
+# absolute delay of the path
+###############################################################################
+
+INST "*/u_phy_calib_0/gen_gate[0].u_en_dqs_ff"  LOC = SLICE_X0Y48;
+INST "*/u_phy_calib_0/gen_gate[1].u_en_dqs_ff"  LOC = SLICE_X0Y29;
+INST "*/u_phy_calib_0/gen_gate[2].u_en_dqs_ff"  LOC = SLICE_X0Y31;
+INST "*/u_phy_calib_0/gen_gate[3].u_en_dqs_ff"  LOC = SLICE_X0Y50;
+INST "*/u_phy_calib_0/gen_gate[4].u_en_dqs_ff"  LOC = SLICE_X0Y51;
+INST "*/u_phy_calib_0/gen_gate[5].u_en_dqs_ff"  LOC = SLICE_X0Y128;
+INST "*/u_phy_calib_0/gen_gate[6].u_en_dqs_ff"  LOC = SLICE_X0Y130;
+INST "*/u_phy_calib_0/gen_gate[7].u_en_dqs_ff"  LOC = SLICE_X0Y131;
+
+# Control for DQS gate - from fabric flop. Prevent "runaway" delay -
+# two parts to this path: (1) from fabric flop to IDELAY, (2) from
+# IDELAY to asynchronous reset of IDDR that drives the DQ CE's
+# A single number is used for all speed grades - value based on 333MHz.
+# This can be relaxed for lower frequencies.
+NET "*/u_phy_io_0/en_dqs*" MAXDELAY = 600 ps;
+NET "*/u_phy_io_0/gen_dqs*.u_iob_dqs/en_dqs_sync" MAXDELAY = 850 ps;
+
+###############################################################################
+# "Half-cycle" path constraint from IDDR to CE pin for all DQ IDDR's
+# for DQS Read Postamble Glitch Squelch circuit
+###############################################################################
+
+# Max delay from output of IDDR to CE input of DQ IDDRs = tRPST + some slack
+#  where slack account for rise-time of DQS on board. For now assume slack = 
+#  0.400ns (based on initial SPICE simulations, assumes use of ODT), so 
+#  time = 0.4*Tcyc + 0.40ns = 1.6ns @333MHz
+INST "*/gen_dqs[*].u_iob_dqs/u_iddr_dq_ce" TNM = "TNM_DQ_CE_IDDR";
+INST "*/gen_dq[*].u_iob_dq/gen_stg2_*.u_iddr_dq" TNM = "TNM_DQS_FLOPS";
+TIMESPEC "TS_DQ_CE" = FROM "TNM_DQ_CE_IDDR" TO "TNM_DQS_FLOPS" 1.9 ns;
+
+################################################################################
+
