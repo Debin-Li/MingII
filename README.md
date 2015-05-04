@@ -15,6 +15,13 @@ They include the verilog files for the FPGA, and the Linux kernel and drivers fo
 Microblaze embedded soft processor, and the userspace tools used for interfacing with
 the NAND flash chip.
 
+Assuming you have fabricated the Ming II board files located in the ```pcb/MingII``` directory,
+to get started use the genace tool to generate an ace image to put in the CF card slot. The
+FPGA hardware (.bit) files are already pregenerated for you.
+
+To modify the logic on the FPGA, you’ll need to use Xilinx ISE to open and build the files
+in the ```hw``` directory.
+
 ## Support
 
 This repository and the source files within are provided to you for free, without support or warranty
